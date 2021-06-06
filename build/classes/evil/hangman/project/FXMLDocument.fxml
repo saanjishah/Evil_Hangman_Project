@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="410.0" prefWidth="721.0" style="-fx-background-color: #ff9ef2;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="evil.hangman.project.FXMLDocumentController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd314" height="232.0" layoutX="-2.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" width="129.0" />
+        <Button fx:id="start" layoutX="286.0" layoutY="14.0" onAction="#handleButtonAction" prefHeight="18.0" prefWidth="150.0" style="-fx-background-color: #001bb7;" text="Start" textFill="WHITE" />
+        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="300.0" minHeight="16" minWidth="69" prefHeight="54.0" prefWidth="400.0" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Button fx:id="letter" layoutX="477.0" layoutY="208.0" mnemonicParsing="false" onAction="#getGuess" prefHeight="38.0" prefWidth="123.0" style="-fx-background-color: #001bb7;" text="Guess a Letter" textFill="WHITE" />
+      <ImageView fx:id="pics" fitHeight="232.0" fitWidth="197.0" layoutX="131.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a5db72" height="138.0" layoutX="400.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" width="278.0" />
+      <Text layoutX="474.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guessed Letters:">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Label fx:id="guessedLet" alignment="TOP_LEFT" layoutX="400.0" layoutY="83.0" prefHeight="92.0" prefWidth="278.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ListView fx:id="topFive" layoutX="439.0" layoutY="258.0" prefHeight="138.0" prefWidth="200.0" />
+      <Text layoutX="7.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Incorrect Guesses:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="12.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct Guesses:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="incLab" layoutX="47.0" layoutY="144.0" prefHeight="27.0" prefWidth="32.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="corLab" layoutX="47.0" layoutY="244.0" prefHeight="27.0" prefWidth="32.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="result" alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="368.0" prefHeight="27.0" prefWidth="170.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
